@@ -1,0 +1,236 @@
+/*Setup*/
+
+:root{
+  --red-500: hsl(10, 79%, 65%);
+  --blue-300: hsl(186, 34%, 65%);
+  --brown-950: hsl(25, 47%, 15%);
+  --brown-400: hsl(28, 10%, 53%);
+  --red-100:  hsl(26, 66%, 93%);
+  --font-family: "DM Sans";
+  --font-weight-1: 400;
+  --font-weight-2: 700;
+  --transition: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html{
+  font-size: 18px;
+}
+
+/*Mobile design*/
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-100);
+  font-family: var(--font-family);
+}
+
+header{
+  background-color: var(--red-500);
+  width: 90%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+header .left-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: white;
+}
+
+header .left-section p{
+  font-weight: var(--font-weight-1);
+  font-size: 0.8rem;
+}
+
+header .left-section strong{
+  font-weight: var(--font-weight-2);
+  font-size: 1.1rem;
+}
+
+header .right-section{
+  display: flex;
+  align-items: center;
+}
+
+header .right-section img{
+  width: 3rem;
+}
+
+main{
+  background-color: whitesmoke;
+  width: 90%;
+  margin-top: 0.7rem;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+main h1{
+  color: var(--brown-950);
+  font-size: 1.37rem;
+  font-weight: var(--font-weight-2)
+}
+
+.bar-section{
+  display: flex;
+  flex-direction: row;
+  height: 15rem;
+  width: 97%;
+  margin: 0 auto;
+  gap: 0.3rem;
+}
+
+.bar{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.bar-fill{
+  height: 50%;
+  background-color: var(--red-500);
+  width: 2rem;
+  border-radius: 0.2rem;
+}
+
+.mon .bar-fill{
+  height: 17.5%;
+}
+
+.tue .bar-fill{
+  height: 34.91%;
+}
+
+.wed .bar-fill{
+  background-color: var(--blue-300);
+  height: 52.26%;
+}
+
+.thu .bar-fill{
+  height: 31.7%;
+}
+
+.fri .bar-fill{
+  height: 23.39%;
+}
+
+.sat .bar-fill{
+  height: 43.28%;
+}
+
+.sun .bar-fill{
+  height: 24.48%;
+}
+
+.amount{
+  display: none;
+}
+
+.day{
+  text-align: center;
+  font-weight: var(--font-weight-1);
+  color: var(--brown-400);
+  font-size: 1.05rem;
+}
+
+hr{
+  border-top: var(--brown-400) solid 0.13rem;
+  margin-top: 1rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.total-section{
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-section .left-section strong{
+  color: var(--brown-400);
+  font-weight: var(--font-weight-1);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.total-section .left-section h2{
+  color: var(--brown-950);
+  font-weight: var(--font-weight-2);
+  font-size: 1.57rem;
+}
+
+.total-section .right-section strong{
+  text-align: right;
+  color: var(--brown-950);
+  display: block;
+  font-weight: var(--font-weight-2)
+}
+
+.total-section .right-section p{
+  color: var(--brown-400);
+  font-weight: var(--font-weight-1)
+}
+
+/*Desktop Design*/
+
+@media screen and (min-width: 768px){
+
+  header{
+    width: 30%;
+  }
+
+  main{
+    width: 30%;
+    border-radius: 1.3rem;
+    padding: 1.5rem;
+  }
+
+  .bar-section{
+    width: 100%;
+    justify-content: space-between;
+    height: 13rem;
+  }
+
+  .bar-fill{
+    cursor: pointer;
+  }
+
+  .total-section .left-section h2{
+    font-size: 2rem;
+  }
+
+  .amount{
+    display: none;
+    background-color: var(--brown-950);
+    color: white;
+    text-align: center;
+    font-weight: var(--font-weight-2);
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    margin: 0 auto;
+    overflow: visible;
+    transition: var(--transition);
+  }
+}
