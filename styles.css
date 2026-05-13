@@ -142,6 +142,16 @@ main h1{
 
 .amount{
   display: none;
+  background-color: var(--brown-950);
+  color: white;
+  text-align: center;
+  font-weight: var(--font-weight-2);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  overflow: visible;
+  transition: var(--transition);
 }
 
 .day{
